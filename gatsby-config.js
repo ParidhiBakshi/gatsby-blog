@@ -6,12 +6,21 @@ module.exports = {
       summary: `who lives and works in Impetus Indore.`,
     },
     description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.app/`,
+    siteUrl: `https://competent-khorana-42a506.netlify.app/`,
     social: {
       twitter: `ParidhiBakshi`,
     },
   },
   plugins: [
+    {
+      resolve: 'gatsby-source-rest-api',
+      options: {
+        endpoints: [
+          'https://jsonplaceholder.typicode.com/posts',
+          'https://jsonplaceholder.typicode.com/users',
+        ],
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
